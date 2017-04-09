@@ -104,11 +104,6 @@
     <Compile Include="Employee\AddEmployee.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SA_DataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SA_DataSet.xsd</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Bill_Master\AddBill.resx">
@@ -135,17 +130,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="SA_DataSet.xsc">
-      <DependentUpon>SA_DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SA_DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SA_DataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SA_DataSet.xss">
-      <DependentUpon>SA_DataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
