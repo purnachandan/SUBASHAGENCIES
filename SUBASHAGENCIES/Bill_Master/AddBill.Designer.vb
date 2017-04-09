@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class AddBill
+Partial Class frmAddBill
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,23 +24,23 @@ Partial Class AddBill
     Private Sub InitializeComponent()
         Me.lblBillType = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.cmbBillType = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.lblStartBill = New System.Windows.Forms.Label()
-        Me.lblEndBill = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.btnGenerate = New System.Windows.Forms.Button()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.lblEndBill = New System.Windows.Forms.Label()
+        Me.lblStartBill = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cmbBillType = New System.Windows.Forms.ComboBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.lblBillNo = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.lblOutlet = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.btnAdd = New System.Windows.Forms.Button()
-        Me.dgvBills = New System.Windows.Forms.DataGridView()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.lblOutlet = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.lblBillNo = New System.Windows.Forms.Label()
+        Me.dgvBills = New System.Windows.Forms.DataGridView()
         Me.Bill_No = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Outlet_Name = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Bill_Amount = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -71,49 +71,36 @@ Partial Class AddBill
         Me.Panel1.Controls.Add(Me.cmbBillType)
         Me.Panel1.Controls.Add(Me.lblBillType)
         Me.Panel1.Location = New System.Drawing.Point(84, 4)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(583, 148)
         Me.Panel1.TabIndex = 1
         '
-        'cmbBillType
+        'btnGenerate
         '
-        Me.cmbBillType.FormattingEnabled = True
-        Me.cmbBillType.Items.AddRange(New Object() {"General", "Britannia", "Marico", "Johnson"})
-        Me.cmbBillType.Location = New System.Drawing.Point(107, 25)
-        Me.cmbBillType.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.cmbBillType.Name = "cmbBillType"
-        Me.cmbBillType.Size = New System.Drawing.Size(160, 24)
-        Me.cmbBillType.TabIndex = 2
-        Me.cmbBillType.Text = "---Select---"
+        Me.btnGenerate.Location = New System.Drawing.Point(240, 102)
+        Me.btnGenerate.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnGenerate.Name = "btnGenerate"
+        Me.btnGenerate.Size = New System.Drawing.Size(100, 28)
+        Me.btnGenerate.TabIndex = 8
+        Me.btnGenerate.Text = "Generate"
+        Me.btnGenerate.UseVisualStyleBackColor = True
         '
-        'Label1
+        'TextBox3
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(331, 28)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(42, 17)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Date:"
+        Me.TextBox3.Location = New System.Drawing.Point(382, 68)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(132, 23)
+        Me.TextBox3.TabIndex = 7
         '
-        'TextBox1
+        'TextBox2
         '
-        Me.TextBox1.Location = New System.Drawing.Point(382, 25)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(132, 23)
-        Me.TextBox1.TabIndex = 3
-        '
-        'lblStartBill
-        '
-        Me.lblStartBill.AutoSize = True
-        Me.lblStartBill.Location = New System.Drawing.Point(36, 71)
-        Me.lblStartBill.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblStartBill.Name = "lblStartBill"
-        Me.lblStartBill.Size = New System.Drawing.Size(64, 17)
-        Me.lblStartBill.TabIndex = 4
-        Me.lblStartBill.Text = "Start Bill:"
+        Me.TextBox2.Location = New System.Drawing.Point(108, 68)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(159, 23)
+        Me.TextBox2.TabIndex = 6
         '
         'lblEndBill
         '
@@ -125,31 +112,44 @@ Partial Class AddBill
         Me.lblEndBill.TabIndex = 5
         Me.lblEndBill.Text = "End Bill:"
         '
-        'TextBox2
+        'lblStartBill
         '
-        Me.TextBox2.Location = New System.Drawing.Point(108, 68)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(159, 23)
-        Me.TextBox2.TabIndex = 6
+        Me.lblStartBill.AutoSize = True
+        Me.lblStartBill.Location = New System.Drawing.Point(36, 71)
+        Me.lblStartBill.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblStartBill.Name = "lblStartBill"
+        Me.lblStartBill.Size = New System.Drawing.Size(64, 17)
+        Me.lblStartBill.TabIndex = 4
+        Me.lblStartBill.Text = "Start Bill:"
         '
-        'TextBox3
+        'TextBox1
         '
-        Me.TextBox3.Location = New System.Drawing.Point(382, 68)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(132, 23)
-        Me.TextBox3.TabIndex = 7
+        Me.TextBox1.Location = New System.Drawing.Point(382, 25)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(132, 23)
+        Me.TextBox1.TabIndex = 3
         '
-        'btnGenerate
+        'Label1
         '
-        Me.btnGenerate.Location = New System.Drawing.Point(240, 102)
-        Me.btnGenerate.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnGenerate.Name = "btnGenerate"
-        Me.btnGenerate.Size = New System.Drawing.Size(100, 28)
-        Me.btnGenerate.TabIndex = 8
-        Me.btnGenerate.Text = "Generate"
-        Me.btnGenerate.UseVisualStyleBackColor = True
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(331, 28)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(42, 17)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Date:"
+        '
+        'cmbBillType
+        '
+        Me.cmbBillType.FormattingEnabled = True
+        Me.cmbBillType.Items.AddRange(New Object() {"General", "Britannia", "Marico", "Johnson"})
+        Me.cmbBillType.Location = New System.Drawing.Point(107, 25)
+        Me.cmbBillType.Margin = New System.Windows.Forms.Padding(4)
+        Me.cmbBillType.Name = "cmbBillType"
+        Me.cmbBillType.Size = New System.Drawing.Size(160, 24)
+        Me.cmbBillType.TabIndex = 2
+        Me.cmbBillType.Text = "---Select---"
         '
         'Panel2
         '
@@ -161,73 +161,15 @@ Partial Class AddBill
         Me.Panel2.Controls.Add(Me.TextBox4)
         Me.Panel2.Controls.Add(Me.lblBillNo)
         Me.Panel2.Location = New System.Drawing.Point(84, 192)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(583, 148)
         Me.Panel2.TabIndex = 2
         '
-        'lblBillNo
-        '
-        Me.lblBillNo.AutoSize = True
-        Me.lblBillNo.Location = New System.Drawing.Point(46, 21)
-        Me.lblBillNo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblBillNo.Name = "lblBillNo"
-        Me.lblBillNo.Size = New System.Drawing.Size(52, 17)
-        Me.lblBillNo.TabIndex = 9
-        Me.lblBillNo.Text = "Bill No."
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(108, 18)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(132, 23)
-        Me.TextBox4.TabIndex = 10
-        '
-        'lblOutlet
-        '
-        Me.lblOutlet.AutoSize = True
-        Me.lblOutlet.Location = New System.Drawing.Point(8, 69)
-        Me.lblOutlet.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblOutlet.Name = "lblOutlet"
-        Me.lblOutlet.Size = New System.Drawing.Size(91, 17)
-        Me.lblOutlet.TabIndex = 11
-        Me.lblOutlet.Text = "Outlet Name:"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(107, 66)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(420, 24)
-        Me.ComboBox1.TabIndex = 12
-        '
-        'btnAdd
-        '
-        Me.btnAdd.Location = New System.Drawing.Point(240, 102)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(100, 28)
-        Me.btnAdd.TabIndex = 13
-        Me.btnAdd.Text = "Add"
-        Me.btnAdd.UseVisualStyleBackColor = True
-        '
-        'dgvBills
-        '
-        Me.dgvBills.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.dgvBills.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Bill_No, Me.Outlet_Name, Me.Bill_Amount})
-        Me.dgvBills.Location = New System.Drawing.Point(32, 363)
-        Me.dgvBills.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.dgvBills.Name = "dgvBills"
-        Me.dgvBills.ReadOnly = True
-        Me.dgvBills.Size = New System.Drawing.Size(697, 138)
-        Me.dgvBills.TabIndex = 3
-        '
         'TextBox5
         '
         Me.TextBox5.Location = New System.Drawing.Point(382, 18)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(132, 23)
         Me.TextBox5.TabIndex = 15
@@ -241,6 +183,64 @@ Partial Class AddBill
         Me.Label2.Size = New System.Drawing.Size(44, 17)
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "Type:"
+        '
+        'btnAdd
+        '
+        Me.btnAdd.Location = New System.Drawing.Point(240, 102)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(100, 28)
+        Me.btnAdd.TabIndex = 13
+        Me.btnAdd.Text = "Add"
+        Me.btnAdd.UseVisualStyleBackColor = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(107, 66)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(420, 24)
+        Me.ComboBox1.TabIndex = 12
+        '
+        'lblOutlet
+        '
+        Me.lblOutlet.AutoSize = True
+        Me.lblOutlet.Location = New System.Drawing.Point(8, 69)
+        Me.lblOutlet.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblOutlet.Name = "lblOutlet"
+        Me.lblOutlet.Size = New System.Drawing.Size(91, 17)
+        Me.lblOutlet.TabIndex = 11
+        Me.lblOutlet.Text = "Outlet Name:"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(108, 18)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(132, 23)
+        Me.TextBox4.TabIndex = 10
+        '
+        'lblBillNo
+        '
+        Me.lblBillNo.AutoSize = True
+        Me.lblBillNo.Location = New System.Drawing.Point(46, 21)
+        Me.lblBillNo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblBillNo.Name = "lblBillNo"
+        Me.lblBillNo.Size = New System.Drawing.Size(52, 17)
+        Me.lblBillNo.TabIndex = 9
+        Me.lblBillNo.Text = "Bill No."
+        '
+        'dgvBills
+        '
+        Me.dgvBills.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.dgvBills.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Bill_No, Me.Outlet_Name, Me.Bill_Amount})
+        Me.dgvBills.Location = New System.Drawing.Point(32, 363)
+        Me.dgvBills.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvBills.Name = "dgvBills"
+        Me.dgvBills.ReadOnly = True
+        Me.dgvBills.Size = New System.Drawing.Size(697, 138)
+        Me.dgvBills.TabIndex = 3
         '
         'Bill_No
         '
@@ -269,7 +269,7 @@ Partial Class AddBill
         Me.Bill_Amount.ReadOnly = True
         Me.Bill_Amount.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         '
-        'AddBill
+        'frmAddBill
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -278,8 +278,8 @@ Partial Class AddBill
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Name = "AddBill"
+        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Name = "frmAddBill"
         Me.Text = "Add Bills"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

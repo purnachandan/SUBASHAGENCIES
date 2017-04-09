@@ -76,6 +76,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Beat\AddBeat.Designer.vb">
+      <DependentUpon>AddBeat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Beat\AddBeat.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Bill_Master\AddBill.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,7 @@
       <DependentUpon>AddBill.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -106,6 +113,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Beat\AddBeat.resx">
+      <DependentUpon>AddBeat.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Bill_Master\AddBill.resx">
       <DependentUpon>AddBill.vb</DependentUpon>
     </EmbeddedResource>

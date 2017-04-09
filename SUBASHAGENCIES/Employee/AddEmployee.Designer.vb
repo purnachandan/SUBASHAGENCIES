@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class AddEmployee
+Partial Class frmAddEmployee
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -126,6 +126,7 @@ Partial Class AddEmployee
         '
         Me.txtSalary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtSalary.Location = New System.Drawing.Point(149, 291)
+        Me.txtSalary.MaxLength = 6
         Me.txtSalary.Multiline = True
         Me.txtSalary.Name = "txtSalary"
         Me.txtSalary.Size = New System.Drawing.Size(220, 27)
@@ -283,7 +284,7 @@ Partial Class AddEmployee
         Me.txtDesignation_Emp.Size = New System.Drawing.Size(220, 27)
         Me.txtDesignation_Emp.TabIndex = 17
         '
-        'AddEmployee
+        'frmAddEmployee
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -291,7 +292,7 @@ Partial Class AddEmployee
         Me.Controls.Add(Me.pnlAddEmployee)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "AddEmployee"
+        Me.Name = "frmAddEmployee"
         Me.Text = "Add Employee"
         Me.pnlAddEmployee.ResumeLayout(False)
         Me.pnlAddEmployee.PerformLayout()

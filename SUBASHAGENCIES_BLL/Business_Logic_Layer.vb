@@ -62,6 +62,33 @@ Public Class Business_Logic_Layer
             Add_Employee = False
         End Try
     End Function
+    Public Function Add_Beat(sBeatName As String, iOutletCount As Short)
+        Dim oCmd As New SqlCommand
+        Dim oParam1 As SqlParameter
+        Dim oParam2 As SqlParameter
+        Try
+            oCmd.CommandType = CommandType.StoredProcedure
+            oCmd.CommandText = "ADD_BEAT"
+
+            oParam1 = New SqlParameter("@BEAT_NAME", SqlDbType.VarChar)
+            oParam1.Value = sBeatName
+            oCmd.Parameters.Add(oParam1)
+
+            oParam2 = New SqlParameter("@OUTLET_COUNT", SqlDbType.Int)
+            oParam2.Value = iOutletCount
+            oCmd.Parameters.Add(oParam2)
+
+            If (oDAL.Add_Record_With_Proc(oCmd)) Then
+                Add_Beat = True
+            Else
+                Add_Beat = False
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Add_Beat = False
+        End Try
+    End Function
     Public Function Pull_Designation()
         Dim oDesignations_Table As DataTable
         Dim oDesginations As New List(Of DESIGNATION)

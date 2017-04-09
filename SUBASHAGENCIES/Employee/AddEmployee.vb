@@ -1,27 +1,27 @@
 ﻿Imports SUBASHAGENCIES_BLL
 Imports System.Text.RegularExpressions
 
-Public Class AddEmployee
+Public Class frmAddEmployee
     Dim oBLL As Business_Logic_Layer
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles pnlAddEmployee.Paint
-
+    Public Sub New()
+        Try
+            ' This call is required by the designer.
+            InitializeComponent()
+            oBLL = New Business_Logic_Layer
+            ' Add any initialization after the InitializeComponent() call.
+        Catch ex As Exception
+            MsgBox(ex.Message, vbOKCancel, Employee & " - Collection Management System")
+        End Try
     End Sub
-
-    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbStatus.SelectedIndexChanged
-
-    End Sub
-
     Private Sub AddEmployee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            oBLL = New Business_Logic_Layer
             'dtpJoiningDate.Format = DateTimePickerFormat.Custom
             'dtpJoiningDate.CustomFormat = "dd-MMM-yyyy"
             Call LoadControls()
 
         Catch ex As Exception
-
+            MsgBox(ex.Message, vbOKCancel, Employee & " - Collection Management System")
         End Try
-
     End Sub
 
     Private Sub LoadControls()
@@ -34,7 +34,7 @@ Public Class AddEmployee
             txtJoiningDate.Text = dtpJoiningDate.Value.ToString("dd-MMM-yyyy")
             dtpJoiningDate.MaxDate = DateAdd("d", 1, Date.Now)
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox(ex.Message, vbOKCancel, Employee & " - Collection Management System")
         End Try
     End Sub
 
@@ -42,7 +42,7 @@ Public Class AddEmployee
         Try
             txtJoiningDate.Text = dtpJoiningDate.Value.ToString("dd-MMM-yyyy")
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox(ex.Message, vbOKCancel, Employee & " - Collection Management System")
         End Try
     End Sub
 
@@ -50,7 +50,7 @@ Public Class AddEmployee
         Try
             ResetControls()
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox(ex.Message, vbOKCancel, Employee & " - Collection Management System")
         End Try
     End Sub
 
@@ -62,7 +62,7 @@ Public Class AddEmployee
             cmbDesignation.DisplayMember = "DesignationName"
             cmbDesignation.ValueMember = "DesignationID"
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox(ex.Message, vbOKCancel, Employee & " - Collection Management System")
         End Try
     End Sub
 
@@ -75,7 +75,7 @@ Public Class AddEmployee
             cmbStatus.ValueMember = "StatusID"
             cmbStatus.SelectedItem = cmbStatus.Items.Item(1)
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox(ex.Message, vbOKCancel, Employee & " - Collection Management System")
         End Try
     End Sub
 
@@ -90,18 +90,18 @@ Public Class AddEmployee
                 End If
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox(ex.Message, vbOKCancel, Employee & " - Collection Management System")
         End Try
     End Sub
 
     Private Function ValidateControls()
         Try
-            If Not (Regex.IsMatch(txtFirstName.Text, "^[A-Za-z0-9]{1,50}$")) Then
+            If Not (Regex.IsMatch(txtFirstName.Text, "^[A-Za-z0-9 ]{1,50}$")) Then
                 MsgBox("First Name con contain only alphabets and numbers", vbOK, "Collection Mangement System")
                 ValidateControls = False
                 Exit Function
             End If
-            If Not (Regex.IsMatch(txtLastName.Text, "^[A-Za-z0-9]{1,50}$")) Then
+            If Not (Regex.IsMatch(txtLastName.Text, "^[A-Za-z0-9 ]{1,50}$")) Then
                 MsgBox("Last Name con contain only alphabets and numbers", vbOK, "Collection Mangement System")
                 ValidateControls = False
                 Exit Function
@@ -131,7 +131,7 @@ Public Class AddEmployee
             ValidateControls = True
         Catch ex As Exception
             ValidateControls = False
-            MsgBox(ex.Message)
+            MsgBox(ex.Message, vbOKCancel, Employee & " - Collection Management System")
         End Try
     End Function
 
@@ -146,7 +146,7 @@ Public Class AddEmployee
             cmbStatus.SelectedItem = cmbStatus.Items.Item(1)
             txtSalary.Text = "0"
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox(ex.Message, vbOKCancel, Employee & " - Collection Management System")
         End Try
     End Sub
 
