@@ -6,6 +6,8 @@ Public Class Business_Logic_Layer
     Public sQuery As String
     Public sDesignation_Query As String = "SELECT DESIGNATION_ID, DESIGNATION_NAME FROM DESIGNATION_MASTER ORDER BY DESIGNATION_ID ASC"
     Public sStatus_Query As String = "SELECT STATUS_ID, STATUS_TEXT FROM STATUS_MASTER ORDER BY STATUS_ID ASC"
+    Public sEmployees_Query As String = "SELECT EMPLOYEE_ID, FIRST_NAME, LAST_NAME, SALARY FROM EMPLOYEE_MASTER ORDER BY EMPLOYEE_ID ASC"
+    Public sBeats_Query As String = "SELECT BEAT_ID, BEAT_NAME FROM BEAT_MASTER ORDER BY BEAT_ID ASC"
     Public Sub New()
         Try
             oDAL = New Data_Access_Layer
@@ -124,6 +126,41 @@ Public Class Business_Logic_Layer
             MsgBox(ex.Message)
             Pull_Status = Nothing
         End Try
+    End Function
 
+    Public Function Pull_Beats()
+        Dim oBeats_Table As DataTable
+        Dim oBeats As New List(Of BEAT)
+        Try
+            oBeats_Table = oDAL.Pull_Records(sBeats_Query)
+            For Each dr As DataRow In oBeats_Table.Rows
+                Dim oBeat As BEAT
+                oBeat = New BEAT(dr("BEAT_ID").ToString,
+                                           dr("BEAT_NAME").ToString)
+                oBeats.Add(oBeat)
+            Next
+            Pull_Beats = oBeats
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Pull_Beats = Nothing
+        End Try
+    End Function
+
+    Public Function Pull_Employees()
+        Dim oEmployees_Table As DataTable
+        Dim oEmployees As New List(Of EMPLOYEE)
+        Try
+            oEmployees_Table = oDAL.Pull_Records(sEmployees_Query)
+            For Each dr As DataRow In oEmployees_Table.Rows
+                Dim oEmployee As EMPLOYEE
+                oEmployee = New EMPLOYEE(dr("EMPLOYEE_ID").ToString,
+                                           dr("FIRST_NAME").ToString + dr("LAST_NAME").ToString, 0)
+                oEmployees.Add(oEmployee)
+            Next
+            Pull_Employees = oEmployees
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Pull_Employees = Nothing
+        End Try
     End Function
 End Class

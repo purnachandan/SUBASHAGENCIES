@@ -66,8 +66,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\BEAT.vb" />
     <Compile Include="Business_Logic_Layer.vb" />
     <Compile Include="Entities\DESIGNATION.vb" />
+    <Compile Include="Entities\EMPLOYEE.vb" />
     <Compile Include="Entities\STATUS.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
