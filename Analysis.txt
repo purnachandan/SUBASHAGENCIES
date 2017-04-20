@@ -1,0 +1,52 @@
+1. Adding Employees
+	a. Employee First Name
+	b. Employee Last Name
+	c. Mobile Number
+	d. Designation
+	e. Salary
+	f. Joining Date
+	g. Release Date
+	h. Contact Information
+
+2. Add Beat
+	a. Beat Name
+	b. Start Location
+	c. End Lcoation
+
+3. Assign Beats to Employee
+	a. Employee ID
+	b. Beat ID
+
+4. Add Customer
+	a. Customer Name
+	b. Outlet Name
+	c. Beat Name
+	d. Type of Outlet
+	e. Address
+	f. Mobile Number
+
+5. Add Company
+	a. Company Name
+	b. Company Use ID
+
+6. Add Bills
+	a. Bill Date
+	b. Bill Number
+	c. Outlet Name
+	d. Company Use ID
+	e. Net Rate
+	f. Counter Discount
+	g. Cash Discount
+	h. Full Paid
+
+7. Assign Bills to Employees
+	a. Bill ID
+	b. Employee ID
+
+8. Bill Transactions
+	a. Bill ID
+	b. Total amount
+	c. Received Installment
+
+
+
